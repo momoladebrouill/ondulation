@@ -11,7 +11,7 @@ pg.init()
 f = pg.display.set_mode(size=(WIND, WIND))
 pg.display.set_caption("")
 fpsClock = pg.time.Clock()
-font = pg.font.SysFont('consolas', 15) #police//roxane
+font = pg.font.SysFont('consolas', 25) #police//roxane
 quis=0
 b = True
 def draw(x,y):
@@ -55,9 +55,10 @@ try:
                 b = False
                 print(" Fin du jeu  babe")
             elif event.type == pg.KEYUP:
-                """if event.dict['key']==pg.K_SPACE:
-                    
-                if event.dict['key']==pg.K_a:"""
+                if event.dict['key']==pg.K_ESCAPE:
+                    b = False
+                    print("fin du jeu darlin")
+                """if event.dict['key']==pg.K_a:"""
                     
             elif event.type==pg.MOUSEBUTTONUP:
                 if event.button==1: #click gauche
